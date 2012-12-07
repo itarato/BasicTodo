@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource> {
+    NSMutableArray *items;
+}
+
+@property (nonatomic, retain) IBOutlet UITableView *table;
+
+- (IBAction)onClickAddItem:(id)sender;
 
 @end
