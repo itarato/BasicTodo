@@ -10,6 +10,9 @@
 
 @protocol AddTodoDelegate <NSObject>
 
+@optional
+
+// Delegated message for item creation.
 - (void)onAddNewTodoItem:(NSString *)item;
 
 @end

@@ -19,7 +19,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self->items = [NSMutableArray arrayWithObject:@"First item"];
+        self->items = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -73,7 +73,9 @@
     [self->items addObject:item];
     [self.table reloadData];
     [self->addViewController dismissViewControllerAnimated:YES completion:^{
-        [[[UIAlertView alloc] initWithTitle:@"Basic Todo" message:@"New item has been added." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        NSString *message = [NSString stringWithFormat:@"New item has been added: %@.", item];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Basic Todo" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
     }];
 }
 

@@ -11,12 +11,17 @@
 #import "AddTodoDelegate.h"
 
 @interface ViewController : UIViewController <UITableViewDataSource, AddTodoDelegate> {
+    // Storage of todo items.
     NSMutableArray *items;
+    
+    // View controller facilitating the item creation interface.
     AddViewController *addViewController;
 }
 
+// Reference to the table view.
 @property (nonatomic, retain) IBOutlet UITableView *table;
 
+// Event handler for the add new item button.
 - (IBAction)onClickAddItem:(id)sender;
 
 @end

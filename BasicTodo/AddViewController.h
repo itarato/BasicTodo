@@ -11,9 +11,13 @@
 
 @interface AddViewController : UIViewController
 
+// Delegator that can recieve the created new item.
 @property (nonatomic) id<AddTodoDelegate> delegate;
+
+// Reference to the item text field.
 @property (nonatomic, retain) IBOutlet UITextField *itemField;
 
+// Event handler on the add button.
 - (IBAction)onClickAdd:(id)sender;
 
 @end
