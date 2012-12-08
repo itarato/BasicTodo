@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddViewController.h"
+#import "AddTodoDelegate.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource> {
+@interface ViewController : UIViewController <UITableViewDataSource, AddTodoDelegate> {
     NSMutableArray *items;
+    AddViewController *addViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *table;

@@ -18,6 +18,8 @@
 		476642721672B1C6009F45C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 476642711672B1C6009F45C3 /* Default-568h@2x.png */; };
 		476642751672B1C6009F45C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476642741672B1C6009F45C3 /* ViewController.m */; };
 		476642781672B1C6009F45C3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476642761672B1C6009F45C3 /* ViewController.xib */; };
+		476642841672B740009F45C3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476642821672B740009F45C3 /* AddViewController.m */; };
+		476642851672B740009F45C3 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476642831672B740009F45C3 /* AddViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		476642731672B1C6009F45C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		476642741672B1C6009F45C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		476642771672B1C6009F45C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		476642811672B740009F45C3 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		476642821672B740009F45C3 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		476642831672B740009F45C3 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		47CA1BEF1673D3D400D1B484 /* AddTodoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTodoDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +89,16 @@
 		476642611672B1C6009F45C3 /* BasicTodo */ = {
 			isa = PBXGroup;
 			children = (
+				476642811672B740009F45C3 /* AddViewController.h */,
+				476642821672B740009F45C3 /* AddViewController.m */,
+				476642831672B740009F45C3 /* AddViewController.xib */,
 				4766426A1672B1C6009F45C3 /* AppDelegate.h */,
 				4766426B1672B1C6009F45C3 /* AppDelegate.m */,
 				476642731672B1C6009F45C3 /* ViewController.h */,
 				476642741672B1C6009F45C3 /* ViewController.m */,
 				476642761672B1C6009F45C3 /* ViewController.xib */,
 				476642621672B1C6009F45C3 /* Supporting Files */,
+				47CA1BEF1673D3D400D1B484 /* AddTodoDelegate.h */,
 			);
 			path = BasicTodo;
 			sourceTree = "<group>";
@@ -163,6 +173,7 @@
 				476642701672B1C6009F45C3 /* Default@2x.png in Resources */,
 				476642721672B1C6009F45C3 /* Default-568h@2x.png in Resources */,
 				476642781672B1C6009F45C3 /* ViewController.xib in Resources */,
+				476642851672B740009F45C3 /* AddViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +187,7 @@
 				476642681672B1C6009F45C3 /* main.m in Sources */,
 				4766426C1672B1C6009F45C3 /* AppDelegate.m in Sources */,
 				476642751672B1C6009F45C3 /* ViewController.m in Sources */,
+				476642841672B740009F45C3 /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +304,7 @@
 				4766427D1672B1C6009F45C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

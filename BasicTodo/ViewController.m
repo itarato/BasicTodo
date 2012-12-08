@@ -41,7 +41,11 @@
 #pragma mark - Custom actions
 
 - (void)onClickAddItem:(id)sender {
-    
+    if (self->addViewController == nil) {
+        self->addViewController = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
+        self->addViewController.delegate = self;
+    }
+    [self presentViewController:self->addViewController animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -63,5 +67,14 @@
     return cell;
 }
 
+#pragma mark - AddTodoDelegate
+
+- (void)onAddNewTodoItem:(NSString *)item {
+    [self->items addObject:item];
+    [self.table reloadData];
+    [self->addViewController dismissViewControllerAnimated:YES completion:^{
+        [[[UIAlertView alloc] initWithTitle:@"Basic Todo" message:@"New item has been added." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }];
+}
 
 @end
