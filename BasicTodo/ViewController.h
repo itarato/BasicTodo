@@ -10,7 +10,7 @@
 #import "AddViewController.h"
 #import "AddTodoDelegate.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource, AddTodoDelegate> {
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, AddTodoDelegate> {
     // Storage of todo items.
     NSMutableArray *items;
     

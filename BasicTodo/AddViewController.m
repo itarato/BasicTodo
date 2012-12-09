@@ -41,6 +41,7 @@
     if (self.delegate != nil && [self.delegate respondsToSelector:@selector(onAddNewTodoItem:)]) {
         [self.delegate onAddNewTodoItem:self.itemField.text];
     }
+    self.itemField.text = @"";
 }
 
 @end

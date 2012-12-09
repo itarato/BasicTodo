@@ -67,6 +67,17 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self->items removeObjectAtIndex:indexPath.row];
+    [self.table reloadData];
+}
+
 #pragma mark - AddTodoDelegate
 
 - (void)onAddNewTodoItem:(NSString *)item {
@@ -77,6 +88,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Basic Todo" message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self->items count]];
 }
 
 @end
